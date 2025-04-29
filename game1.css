@@ -1,0 +1,76 @@
+/* Header Style */
+h1 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  /* Body Style */
+  body {
+    margin: 100px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #d38bff;
+    color: #333;
+  }
+  
+  /* Sentence Placeholders */
+  .sentence span {
+    /* padding: 6px 12px;
+    border: 2px  #aaa;
+    border-radius: 8px;
+    margin: 5px 4px;
+    display: inline-block;
+    min-width: 60px;
+    background-color: #fff;
+    transition: background-color 0.3s; */
+  }
+  
+  .sentence span:hover {
+    /* background-color: #f0e0ff; */
+  }
+  
+  /* Drop Target Highlight */
+  .drop-target {
+    /* border: 2px dashed #555;
+    background-color: #fff8ff;
+    border-radius: 6px;
+    min-height: 30px;
+    transition: background-color 0.3s, border-color 0.3s; */
+  }
+  
+  .drop-target.dragover {
+    /* background-color: #e0cfff;
+    border-color: #6a11cb; */
+  }
+  
+  /* Draggable Images */
+  .drag-img {
+    width: 80px;
+    margin: 10px;
+    cursor: grab;
+    transition: transform 0.2s ease;
+  }
+  
+  .drag-img:hover {
+    /* transform: scale(1.1); */
+  }
+  
+  /* Image Container */
+  .images {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
