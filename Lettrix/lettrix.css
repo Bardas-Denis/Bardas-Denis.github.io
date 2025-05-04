@@ -7,6 +7,21 @@ body {
     background-color: #9d00ff;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('letters-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Adjust transparency here */
+    z-index: -1; /* Put it behind all other content */
+  }
+
 h1 {
     position: fixed;
     top: 0;
