@@ -17,42 +17,42 @@ h1 {
   
   /* Body Style */
   body {
-    margin: 100px 20px 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #d38bff;
     color: #333;
   }
   
-  /* Sentence Placeholders */
-  .sentence span {
-    /* padding: 6px 12px;
-    border: 2px  #aaa;
-    border-radius: 8px;
-    margin: 5px 4px;
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background-zorina.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3; /* Adjust transparency here */
+    z-index: -1; /* Put it behind all other content */
+  }
+
+  .title-word {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px; /* Optional: Make it look like a title */
+    margin-top: 8%;
+  }
+
+  .sentence {
+    font-size: 40px;
+    text-indent: 5%;
+  }
+
+  .indented-line {
     display: inline-block;
-    min-width: 60px;
-    background-color: #fff;
-    transition: background-color 0.3s; */
+    text-indent: 2em;
   }
-  
-  .sentence span:hover {
-    /* background-color: #f0e0ff; */
-  }
-  
-  /* Drop Target Highlight */
-  .drop-target {
-    /* border: 2px dashed #555;
-    background-color: #fff8ff;
-    border-radius: 6px;
-    min-height: 30px;
-    transition: background-color 0.3s, border-color 0.3s; */
-  }
-  
-  .drop-target.dragover {
-    /* background-color: #e0cfff;
-    border-color: #6a11cb; */
-  }
-  
   /* Draggable Images */
   .drag-img {
     width: 80px;
@@ -62,7 +62,7 @@ h1 {
   }
   
   .drag-img:hover {
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
   }
   
   /* Image Container */
@@ -74,3 +74,6 @@ h1 {
     justify-content: center;
   }
   
+  .drop-target-letter {
+    display: none;
+  }
