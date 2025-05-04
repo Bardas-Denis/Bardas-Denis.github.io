@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: sans-serif;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('jungle-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; /* Adjust transparency here */
+    z-index: -1; /* Put it behind all other content */
+  }
+
+  .header {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .game-area {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px; /* Leave space for the timeline at the bottom */
+  }
+  
+  .draggable-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 50px;
+    z-index: 10;
+  }
+  
+  .draggable {
+    width: 150px;
+    height: 150px;
+    cursor: grab;
+  }
+  
+  /* Timeline layout */
+  .timeline-container {
+    position: fixed; /* Stick to bottom of viewport */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw; 
+    height: 120px;
+    z-index: 1; /* Behind draggable items */
+    pointer-events: none; /* Prevent interference with dragging */
+    margin-bottom: 2%;
+  }
+  
+  .vine-bg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+  }
+  
+  /* Drop zones positioned over vine */
+  .drop-zone {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 70px;
+    transform: translateX(-50%);
+    background-color: rgb(219, 219, 219);
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto; /* Allow dropping */
+  }
+  
+  /* Positioning each drop zone evenly */
+  #slot1 { left: 20%; }
+  #slot2 { left: 40%; }
+  #slot3 { left: 60%; }
+  #slot4 { left: 80%; }
+  

@@ -77,7 +77,7 @@ function addEventListenersToLetters(letterElements) {
 
 function generateNumberSquares() {
     const alphabetContainer = document.querySelector('.numbers');
-    const alphabet = '123456789+-*/=';
+    const alphabet = '1234567890+-*/=';
     alphabet.split('').forEach(number => {
         // Create a div for each letter in the alphabet
         const square = document.createElement('div');
