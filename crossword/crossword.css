@@ -1,0 +1,173 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('dogs-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2; /* Adjust transparency here */
+    z-index: -1; /* Put it behind all other content */
+  }
+
+h1 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 10px;
+    width: 100%; 
+    text-align: center;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+.crossword-grid {
+    display: grid;
+    grid-template-columns: repeat(11, 50px);
+    grid-auto-rows: 50px;
+    gap: 2px;
+    margin: 20px;
+  }
+
+.row-image {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+.container {
+    display: flex;
+    justify-content: left;
+    gap: 215px;
+    width: 100%;
+    margin-top: 240px; 
+    margin-left: 20px;
+}
+
+.alphabet {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    gap: 5px;
+}
+
+.alphabet .alphabet-square {
+    width: 40px;
+    height: 40px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Vowel column container */
+.vowel-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between squares */
+}
+
+/* Individual vowel square */
+.vowel-square {
+    width: 60px;
+    height: 60px;
+    background-color: #11066f;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.vowel-square.a {
+    background-color: red;
+}
+.vowel-square.e {
+    background-color: orange;
+}
+.vowel-square.i {
+    background-color: yellow;
+}
+.vowel-square.o {
+    background-color:#72b400;
+}
+.vowel-square.u {
+    background-color: #6868ff;
+}
+.vowel-square.ă {
+    background-color: #b702b7;
+}
+.vowel-square.â {
+    background-color: #ff58c7;
+}
+.vowel-square.î {
+    background-color: red;
+}
+
+.drop-zones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+.drop-zone {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 2px solid #1d00c3;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2px;
+    z-index: 1;
+}
+.drop-zone-basenji{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 2px solid #ff2727;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2px;
+    z-index: 2;
+}
+
+.vowel-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+/* .a .drop-zone{
+    background-color: #11066f;
+} */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebus</title>
+    <link rel="stylesheet" href="crossword.css">
+</head>
+<body>
+    <h1>Rebus</h1>
+    
+    <div class="container">
+        <div class="alphabet">
+        </div>
+        <div class="crossword-grid">
+            <!-- zebra row -->
+            <img src="zebra.png" alt="zebra" style="grid-row: 1; grid-column: 4;" class="row-image">
+            <div class="drop-zone" style="grid-row: 1; grid-column: 5;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 1; grid-column: 6;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone-basenji" style="grid-row: 1; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 1; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 1; grid-column: 9;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- barza row -->
+            <img src="barza.png" style="grid-row: 2; grid-column: 5;" alt="barza" class="row-image">
+            <div class="drop-zone" style="grid-row: 2; grid-column: 6;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone-basenji" style="grid-row: 2; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 2; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 2; grid-column: 9;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 2; grid-column: 10;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- sac row -->
+            <img src="sac.png" style="grid-row: 3; grid-column: 6;" alt="barza" class="row-image">
+            <div class="drop-zone-basenji" style="grid-row: 3; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 3; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 3; grid-column: 9;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- zmeu row -->
+            <img src="zmeu.png" style="grid-row: 4; grid-column: 4;" alt="barza" class="row-image">
+            <div class="drop-zone" style="grid-row: 4; grid-column: 5;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 4; grid-column: 6;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone-basenji" style="grid-row: 4; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 4; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- cozonac row -->
+            <img src="cozonac.png" style="grid-row: 5; grid-column: 2;" alt="barza" class="row-image">
+            <div class="drop-zone" style="grid-row: 5; grid-column: 3;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 5; grid-column: 4;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 5; grid-column: 5;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 5; grid-column: 6;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone-basenji" style="grid-row: 5; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 5; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 5; grid-column: 9;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- joben row -->
+            <img src="joben.png" style="grid-row: 6; grid-column: 6;" alt="barza" class="row-image">
+            <div class="drop-zone-basenji" style="grid-row: 6; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 6; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 6; grid-column: 9;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 6; grid-column: 10;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 6; grid-column: 11;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <!-- ziar row -->
+            <img src="ziar.png" style="grid-row: 7; grid-column: 5;" alt="barza" class="row-image">
+            <div class="drop-zone" style="grid-row: 7; grid-column: 6;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone-basenji" style="grid-row: 7; grid-column: 7;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 7; grid-column: 8;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div class="drop-zone" style="grid-row: 7; grid-column: 9;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          </div>
+        
+    </div>
+    <script src="crossword.js"></script>
+</body>
+</html>
