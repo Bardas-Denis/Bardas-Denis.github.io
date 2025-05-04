@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drag & Drop Match Game</title>
+  <link rel="stylesheet" href="game2.css">
+</head>
+<body>
+
+  <h1>Asociază propozițiile cu imaginile corespunzătoare</h1>
+  <div class="container">
+    <div class="image-box" data-match="1">
+      <img src="picture1.png" alt="Cat">
+      <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="image-box" data-match="3">
+      <img src="picture3.png" alt="Car">
+      <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="image-box" data-match="4">
+      <img src="picture4.png" alt="Apple">
+      <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <div class="image-box" data-match="2">
+        <img src="picture2.png" alt="Dog">
+        <div class="drop-zone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      </div>
+  </div>
+
+  <div class="sentences">
+    <div class="sentence" draggable="true" ondragstart="drag(event)" id="s2" data-match="3">Zorina primește un cățel.</div>
+    <div class="sentence" draggable="true" ondragstart="drag(event)" id="s1" data-match="2">Zorina are 7 ani.</div>
+    <div class="sentence" draggable="true" ondragstart="drag(event)" id="s4" data-match="1">Azor visează un os.</div>
+    <div class="sentence" draggable="true" ondragstart="drag(event)" id="s3" data-match="4">Cățelul se rotește ca un zar.</div>
+  </div>
+
+  <script src="game2.js"></script>
+</body>
+</html>
