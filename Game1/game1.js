@@ -13,15 +13,15 @@ interact('.drag-img').draggable({
       target.setAttribute('data-y', y);
     },
     end(event) {
-      if (!dropSuccess.get(event.target)) {
-        // If not dropped successfully, reset position
-        event.target.style.transform = 'translate(0px, 0px)';
-        event.target.removeAttribute('data-x');
-        event.target.removeAttribute('data-y');
-      }
-
-      // Reset drop success state
-      dropSuccess.set(event.target, false);
+      setTimeout(() => {
+        if (!dropSuccess.get(event.target)) {
+          event.target.style.transform = 'translate(0px, 0px)';
+          event.target.removeAttribute('data-x');
+          event.target.removeAttribute('data-y');
+        }
+    
+        dropSuccess.set(event.target, false);
+      }, 0); 
     }
   }
 });

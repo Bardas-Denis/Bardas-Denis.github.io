@@ -57,6 +57,7 @@ body::before {
 .drag-img {
   width: 80px;
   margin: 10px;
+  touch-action: none;
 }
 
 /* Image Container */
