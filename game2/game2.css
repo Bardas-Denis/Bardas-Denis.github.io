@@ -42,7 +42,7 @@ body {
   }
 
   .image-box {
-    width: 280px;
+    width: 20%;
     margin: 20px;
     background: #fff;
     border: 2px dashed #ccc;
@@ -58,18 +58,26 @@ body {
   }
 
   .drop-zone {
-    margin-top: 10px;
+    margin-top: 15%;
     min-height: 50px;
     background: #e0e0e0;
     border: 1px solid #aaa;
     border-radius: 5px;
   }
 
+  .drop-zone .sentence {
+    width: 92.5%;
+    height: 30px;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+  }
+
   .sentence {
-    margin: 10px;
-    margin-right: 70px;
-    margin-left: 70px;
+    width: 20%;
     padding: 10px;
+    margin: 1%;
+    text-align: center;
     background: #cce5ff;
     border-radius: 5px;
     cursor: grab;
@@ -85,18 +93,18 @@ body {
   }
 
   #s1 {
-    color: rgb(143, 5, 99);
-    background-color: rgb(255, 188, 205);
+    color: #8f0563;
+    background-color: #ffbccd;
   }
   #s2 {
-    color: rgb(0, 109, 53);
-    background-color: rgb(139, 255, 220);
+    color: #006d35;
+    background-color: #8bffdc;
   }
   #s3 {
-    color: rgb(116, 2, 154);
-    background-color: rgb(127, 221, 250);
+    color: #74029a;
+    background-color: #7fddfa;
   }
   #s4 {
-    color: rgb(133, 93, 1);
-    background-color: rgb(249, 218, 136);
+    color: #855d01;
+    background-color: #f9da88;
   }
