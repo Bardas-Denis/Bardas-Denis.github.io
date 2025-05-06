@@ -1,89 +1,50 @@
-const images = document.querySelectorAll('.drag-img');
-const targets = document.querySelectorAll('.drop-target');
-const targets2 = document.querySelectorAll('.drop-target-letter');
+const dropSuccess = new WeakMap();
 
-// const requiredWords = ["zorina", "zar", "zahar", "azor"];
-// let correctPlacements = {};
+interact('.drag-img').draggable({
+  inertia: true,
+  listeners: {
+    move(event) {
+      const target = event.target;
+      const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx;
+      const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy;
 
-// // Initialize all as false
-// requiredWords.forEach(word => {
-//   correctPlacements[word] = false;
-// });
+      target.style.transform = `translate(${x}px, ${y}px)`;
+      target.setAttribute('data-x', x);
+      target.setAttribute('data-y', y);
+    },
+    end(event) {
+      if (!dropSuccess.get(event.target)) {
+        // If not dropped successfully, reset position
+        event.target.style.transform = 'translate(0px, 0px)';
+        event.target.removeAttribute('data-x');
+        event.target.removeAttribute('data-y');
+      }
 
-// function checkAllPlacedCorrectly() {
-//   return requiredWords.every(word => correctPlacements[word]);
-// }
-
-// function showLetterDropZones() {
-//   document.querySelectorAll('.drop-target-letter').forEach(el => {
-//     el.style.display = "inline";  // Or "inline-block" as needed
-//   });
-// }
-
-
-images.forEach(img => {
-  img.addEventListener('dragstart', (e) => {
-    e.dataTransfer.setData('text/plain', e.target.dataset.word);
-    e.dataTransfer.setDragImage(e.target, 40, 40);
-  });
+      // Reset drop success state
+      dropSuccess.set(event.target, false);
+    }
+  }
 });
 
-targets.forEach(target => {
-  target.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    // target.style.backgroundColor = '#e0ffe0';
-  });
-
-  target.addEventListener('dragleave', () => {
-    target.style.backgroundColor = '';
-  });
-
-  target.addEventListener('drop', (e) => {
-    e.preventDefault();
-    const droppedWord = e.dataTransfer.getData('text/plain');
-    if (droppedWord === target.dataset.word) {
-      target.textContent = '';
-      const img = document.querySelector(`img[data-word="${droppedWord}"]`);
-      // correctPlacements[droppedWord] = true;
-
-      // if (checkAllPlacedCorrectly()) {
-      //   showLetterDropZones();
-      // }
-
-    //img.style.display = 'none';
-      const newImg = img.cloneNode();
-    //   newImg.style.width = '40px';
-      target.appendChild(newImg);
-    //   target.style.backgroundColor = '#c8f7c5';
-    } else {
-    //   target.style.backgroundColor = '#f7c5c5';
-    }
-  });
-});
-
-targets2.forEach(target => {
-  target.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    // target.style.backgroundColor = '#e0ffe0';
-  });
-
-  target.addEventListener('dragleave', () => {
-    target.style.backgroundColor = '';
-  });
-
-  target.addEventListener('drop', (e) => {
-    e.preventDefault();
-    const droppedWord = e.dataTransfer.getData('text/plain');
-    if (droppedWord === target.dataset.word) {
-      target.textContent = '';
-      const img = document.querySelector(`img[data-word="${droppedWord}"]`);
-    //img.style.display = 'none';
-      const newImg = img.cloneNode();
-    //   newImg.style.width = '40px';
-      target.appendChild(newImg);
-    //   target.style.backgroundColor = '#c8f7c5';
-    } else {
-    //   target.style.backgroundColor = '#f7c5c5';
-    }
-  });
+interact('.drop-target').dropzone({
+  accept: '.drag-img',
+  overlap: 'center',
+  ondropactivate(event) {
+    console.log("Dropzone activated");
+  },
+  ondrop(event) {
+    const dropzone = event.currentTarget; // This is the actual drop zone element
+    const draggable = event.relatedTarget;
+    const word = draggable.dataset.word;
+  
+    if (dropzone.dataset.word === word) {
+      const img = draggable;
+      img.style.transform = 'none';
+      img.removeAttribute('data-x');
+      img.removeAttribute('data-y');
+      img.style.cursor = 'default';
+      img.setAttribute('draggable', false);  
+      dropSuccess.set(draggable, true);
+      dropzone.replaceWith(img); 
+    }}
 });
