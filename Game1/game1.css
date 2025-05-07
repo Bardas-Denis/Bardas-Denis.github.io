@@ -19,23 +19,23 @@ h1 {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
-  background-color: beige;
+  /* background-color: rgb(245, 245, 220); */
 }
 
-/* body::before {
+body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('background-zorina.jpeg');
+  background-image: url('zorina-background-2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0.3;
   z-index: -1;
-} */
+}
 
 .title-word {
   display: block;
