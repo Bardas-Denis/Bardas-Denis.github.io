@@ -89,7 +89,7 @@ document.addEventListener('click', function (event) {
         if (zone.textContent !== '') {
             // Clear the drop zone
             zone.textContent = ''; // Empty the drop zone
-            zone.style.backgroundColor = "#ddd";
+            zone.style.backgroundColor = "#ffffff";
         }
     }
 });

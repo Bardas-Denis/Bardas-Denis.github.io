@@ -7,8 +7,8 @@ h1 {
     padding: 10px;
     width: 100%; 
     text-align: center;
-    background-color: #333;
-    color: white;
+    background-color: #f9da88;
+    color: rgb(0, 0, 0);
     z-index: 1000;
 }
 
@@ -98,7 +98,7 @@ body {
   }
   #s2 {
     color: #006d35;
-    background-color: #8bffdc;
+    background-color: #76FF33;
   }
   #s3 {
     color: #74029a;

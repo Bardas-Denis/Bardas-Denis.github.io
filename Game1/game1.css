@@ -19,9 +19,10 @@ h1 {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
+  background-color: beige;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -32,9 +33,9 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.3; /* Adjust transparency here */
-  z-index: -1; /* Put it behind all other content */
-}
+  opacity: 0.3;
+  z-index: -1;
+} */
 
 .title-word {
   display: block;
